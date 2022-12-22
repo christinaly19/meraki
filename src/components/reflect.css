@@ -1,0 +1,10 @@
+.centered {
+    display: flex !important;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+h1 {
+font-size: 2rem !important;
+}

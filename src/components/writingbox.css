@@ -1,0 +1,16 @@
+.writingbox{
+
+display: flex;
+ flex-direction: column;
+align-items:center;
+align-content: center;
+
+}
+
+#message {
+width: 70rem;
+}
+
+.spacing {
+height: 0.5rem;
+}

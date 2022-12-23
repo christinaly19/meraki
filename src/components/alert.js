@@ -10,7 +10,7 @@ function Alert() {
     {getQuote ()}, []);
 
     const getQuote = () => {
-        let url = 'https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json';
+        let url = 'https://gist.githubusercontent.com/christinaly19/031afcd1e22150a6a3db72d9d9e6eb8c/raw/13c797a774b4b9f50cce2cd06696e3c1908e9f98/quotes.json';
         fetch(url)
         .then (res => res.json())
         .then(data => {
@@ -36,7 +36,7 @@ function Alert() {
         <p className = 'text-base font-medium text-center m-4 text-[#553E52]'> 
         Prompt: {quote}
         <br></br>
-        Genre: {author}
+        Genre: <mark className = 'bg-[#F7E8E6]'> {author} </mark>
         </p>        
         </div>
     </div>

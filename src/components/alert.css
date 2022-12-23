@@ -1,0 +1,23 @@
+.alert {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.spacebefore {
+height: 3rem !important;
+}
+
+.spacebefore1 {
+height: 1.5rem !important;
+}
+.promptbox {
+    display: flex;
+    flex-direction: column;
+align-items:center;
+align-content: center;
+width: 40rem;
+height: 10rem;
+
+}

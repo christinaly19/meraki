@@ -1,4 +1,3 @@
-import { getByDisplayValue } from '@testing-library/react';
 import React, {useState, useEffect} from 'react'
 import './alert.css'
 import Button from './button'
@@ -36,7 +35,7 @@ function Alert() {
         <p className = 'text-base font-medium text-center m-4 text-[#553E52]'> 
         Prompt: {quote}
         <br></br>
-        Genre: <mark className = 'bg-[#F7E8E6]'> {author} </mark>
+        Theme(s): <mark className = 'bg-[#F7E8E6] text-[#51394e]'> {author} </mark>
         </p>        
         </div>
     </div>

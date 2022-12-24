@@ -3,6 +3,7 @@ import './timer.css'
 import Button from './button'
 
 class Timer extends Component {
+    
     constructor(props){
       super(props);
       this.state={seconds:0};
@@ -27,8 +28,8 @@ class Timer extends Component {
           <div className = 'timer'>
               <h1 className = 'text-2xl'>{this.state.seconds}</h1>
             <div className = 'buttons'>
-              <Button className = 'text-white' id='btn' onClick={this.timer} >Start</Button>
-              <Button className = 'ml-2' onClick={this.onReset}>Reset</Button>
+              <Button className = 'text-white bg-[#5A4257]' id='btn' onClick={this.timer} >Start</Button>
+              <Button className = 'ml-2 text-white bg-[#5A4257]' onClick={this.onReset}>Reset</Button>
         
               </div>
                   {this.state.seconds > 600 &&

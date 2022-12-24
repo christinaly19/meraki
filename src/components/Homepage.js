@@ -30,7 +30,7 @@ function Homepage() {
         <div className = 'tracking-wide centered font-mono font-bold w-full h-ful secondbox bg-black md:h-screen text-6xl'>
             <p className = 'text-6xl'> Create </p>
             <div>
-            <button onClick={navigateToCreate} className = 'text-2xl font-normal tracking-wider font-sans bg-[#7B6A59] hover:bg-[#a8a6a6]'>  &nbsp; click to start &nbsp; </button>
+            <button onClick={navigateToCreate} className = 'text-2xl font-normal tracking-wider font-sans bg-[#a89475] hover:bg-[#827D7B]'>  &nbsp; click to start &nbsp; </button>
             <Routes>
               <Route path='./create' element={<Create/>} />
         </Routes>

@@ -21,9 +21,9 @@ function App() {
     <div>
       <div>
         <Routes>
-          <Route path="/reflect" element={<Reflect />} />
-          <Route path="/create" element={<Create/>} />
-          <Route path="/" element={<Homepage/>} />
+          <Route path="/meraki/reflect" element={<Reflect />} />
+          <Route path="/meraki/create" element={<Create/>} />
+          <Route path="/meraki" element={<Homepage/>} />
         </Routes>
       </div>
     </div>

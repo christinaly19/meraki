@@ -10,12 +10,12 @@ function Alert({className = '', border = '', markstyle ='', link ='',}) {
     {getQuote ()}, []);
 
     const getQuote = () => {
-        let url = link ='https://gist.githubusercontent.com/christinaly19/031afcd1e22150a6a3db72d9d9e6eb8c/raw/13c797a774b4b9f50cce2cd06696e3c1908e9f98/quotes.json';
+        let url = link ;
         fetch(url)
         .then (res => res.json())
         .then(data => {
             let dataQuotes = data.quotes;
-            let randomNum = Math.floor(Math.random() * ((dataQuotes.length) / 2));
+            let randomNum = Math.floor(Math.random() * dataQuotes.length);
             let randomQuote = dataQuotes[randomNum];
             setQuote(randomQuote.quote);
             setAuthor(randomQuote.author);

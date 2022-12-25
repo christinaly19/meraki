@@ -9,8 +9,8 @@ export default function Navbar({ className ='', fixed }) {
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <a
-              className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
-              href="#homepage">
+              className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white hover:text-[#e2dede]"
+              href="/meraki">
               MERAKI
             </a>
             <button
@@ -40,7 +40,7 @@ export default function Navbar({ className ='', fixed }) {
               <li className="nav-item">
                 <a
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  href="#addinglater"
+                  href="/meraki/reflect"
                 >
        <i className= "fa fa-book text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Reflect</span>
                 </a>
@@ -48,7 +48,7 @@ export default function Navbar({ className ='', fixed }) {
               <li className="nav-item">
                 <a
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  href="#pablo"
+                  href="/meraki/create"
                 >
                   <i className= "fa fa-bolt text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Create</span>
                 </a>

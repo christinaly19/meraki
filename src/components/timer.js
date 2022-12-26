@@ -3,24 +3,26 @@ import './timer.css'
 import Button from './button'
 
 class Timer extends Component {
-    
     constructor(props){
       super(props);
       this.state={seconds:0};
+      this.disabled = false;
+      
     }
 
     onStart=()=>{
         this.setState({seconds:this.state.seconds+1});
-        document.getElementById('btn').disabled=true;
     }
 
     onReset =() => {
         clearInterval(this.f);
         this.setState({seconds:0})
+        this.disabled = false;
     }
 
     timer=()=>{
         this.f=setInterval(this.onStart,1000);
+        this.disabled = true;
       }
 
   render(){
@@ -28,8 +30,8 @@ class Timer extends Component {
           <div className = 'timer'>
               <h1 className = 'text-2xl'>{this.state.seconds}</h1>
             <div className = 'buttons'>
-              <Button className = 'text-white bg-[#5A4257]' id='btn' onClick={this.timer} >Start</Button>
-              <Button className = 'ml-2 text-white bg-[#5A4257]' onClick={this.onReset}>Reset</Button>
+              <Button processing = {this.disabled} className = 'text-white bg-[#5A4257]' id='btn' onClick={this.timer} >Start</Button>
+              <Button  className = 'ml-2 text-white bg-[#5A4257]' onClick={this.onReset}>Reset</Button>
         
               </div>
                   {this.state.seconds > 600 &&

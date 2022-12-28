@@ -40,7 +40,7 @@ export default function Navbar({ className ='', fixed }) {
               <li className="nav-item">
                 <a
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  href="/meraki/reflect"
+                  href="./reflect"
                 >
        <i className= "fa fa-book text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Reflect</span>
                 </a>
@@ -48,7 +48,7 @@ export default function Navbar({ className ='', fixed }) {
               <li className="nav-item">
                 <a
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  href="/meraki/create"
+                  href="./create"
                 >
                   <i className= "fa fa-bolt text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Create</span>
                 </a>

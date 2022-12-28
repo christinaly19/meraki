@@ -1,4 +1,4 @@
-## Welcome to Tutor.ly ##
+## Welcome to Meraki ##
 
 <h1> What is Meraki? </h1>
 <p> 'Meraki' is a greek word that means to do something with passion, from the heart, with absolute devotion. It means to leave a part of yourself in the work you do. 
@@ -7,8 +7,7 @@ As the word suggets, Meraki helps writers accomplish this effect by interweaving
  </p>
 
 <br> 
-
-<br> <br> <br> 
+<br>
  <h1> Features of Meraki </h1>
  <p> Meraki has:</p>
  <ol>

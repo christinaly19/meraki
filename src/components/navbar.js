@@ -1,8 +1,22 @@
 import React from "react";
+import { Routes, Route, useNavigate} from 'react-router-dom';
+import Homepage from'./Homepage'
+import Create from './create'
+import Reflect from './reflect'
 
 export default function Navbar({ className ='', fixed }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
-  
+  const navigate = useNavigate();
+
+  const navigatetoHome = () => {
+    navigate('/meraki');
+  }
+    const navigateToCreate = () => {
+      navigate('/meraki/create');
+  };
+  const navigateToReflect = () => {
+    navigate('/meraki/reflect');
+};
   return (
     <>
       <nav className= {className}>
@@ -10,7 +24,7 @@ export default function Navbar({ className ='', fixed }) {
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <a
               className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white hover:text-[#e2dede]"
-              href="/meraki">
+              onClick = {navigatetoHome}>
               MERAKI
             </a>
             <button
@@ -40,15 +54,16 @@ export default function Navbar({ className ='', fixed }) {
               <li className="nav-item">
                 <a
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  href="./reflect"
+                  onClick = {navigateToReflect}
                 >
        <i className= "fa fa-book text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Reflect</span>
                 </a>
               </li>
               <li className="nav-item">
                 <a
+                  onClick = {navigateToCreate}
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  href="./create"
+                  
                 >
                   <i className= "fa fa-bolt text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Create</span>
                 </a>

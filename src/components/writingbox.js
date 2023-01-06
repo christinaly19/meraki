@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react'
 import './writingbox.css'
 import Button from './button'
 
-function Writingbox() {
+function Writingbox(currentpage) {
+currentpage = ''
 const [img, setImg] = useState("");
 const [res, setRes] = useState([]);
 
@@ -27,6 +28,7 @@ const Submit = () => {
 };
 
   return (
+    <div>
     <div className = 'writingbox'>
 
         <label for="message" class="font-serif block mb-2 text-xl font-semibold  text-transparent bg-clip-text bg-gradient-to-r to-[#553e52] from-[#a57ca0]">Start Writing:</label>
@@ -47,14 +49,18 @@ const Submit = () => {
         />
        </div>
       <Button  onClick = {Submit} className = 'mt-2 button ml-2 text-white bg-[#6D8891] hover:bg-[#445054]'>Submit </Button>
+      </div>
 
-      <div className="col-12 d-flex justify-content-evenly flex-wrap">
+      <h1 className = "mt-5 text-center text-lg font-semibold  text-transparent bg-clip-text bg-gradient-to-r to-[#553e52] from-[#a57ca0]"> Your Custom Moodboard:</h1>
+      <p className = 'mt-2 text-center italic'> Your custom moodboard based on your {currentpage} will appear below once you submit:</p>
+      <p className = 'mt-2 text-center italic'> Your Text: {img} </p>
+      <div className="ml-40 mr-40 pictures grid grid-cols-3">
   {res.map((val) => {
     return (
       <>
         <img
           key={val.id}
-          className="col-3 img-fluid img-thumbnail"
+          className="images mt-5 img-fluid img-thumbnail"
           src={val.urls.small}
           alt="val.alt_description"
         />
@@ -63,6 +69,7 @@ const Submit = () => {
   })}
 </div>
       
+  
     </div>
   )
 }

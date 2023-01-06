@@ -12,7 +12,9 @@ input[type="text"], textarea {
     background-color : #f9faff; 
   
   }
-
+.pictures {
+  
+}
 
 #message {
 width: 70rem;
@@ -30,4 +32,9 @@ height: 0.5rem;
 
 .description {
     width: 70rem;
+}
+
+.images{
+  height: 20rem;
+  width: 100%;
 }

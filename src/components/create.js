@@ -16,7 +16,7 @@ function Create() {
       <Alert className = 'bg-[#B4872F] hover:bg-[#966a18]' markstyle='text-base font-medium  text-[#553E52] bg-[#efdbda]' link ='https://gist.githubusercontent.com/christinaly19/e050118855f40b5e11c6267849f20645/raw/0b907274e77c2730c10d975f0ee9e4ee91cf1e25/writingprompts.json'>
       </Alert>    
      <div className = 'spacebefore1'></div>
-      <Writingbox currentpage = 'create'></Writingbox>
+      <Writingbox></Writingbox>
       <div className = 'spacebefore'></div>
       <div className = 'mt-6'>
       <Timer></Timer>

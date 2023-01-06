@@ -2,14 +2,26 @@ import React, {useState, useEffect} from 'react'
 import './writingbox.css'
 import Button from './button'
 
-function Writingbox(currentpage) {
-currentpage = ''
+function Writingbox() {
+
 const [img, setImg] = useState("");
 const [res, setRes] = useState([]);
 
+
 const fetchRequest = async () => {
+  let str = img;
+  const mapObj = {
+    and: "",
+    but: "",
+    the: "",
+    an: "",
+    a: "",
+  };
+  str = str.replace(/\b(?:and|but|the)\b/gi, matched => mapObj[matched]);
+  console.log(str);
+
   const data = await fetch(
-    `https://api.unsplash.com/search/photos?page=1&query=${img}&client_id=${'BPz3g4RcwRZH71JTmq-_3rAcWQiOZ_sBmV2zNYnd39g'}&per_page=20`
+    `https://api.unsplash.com/search/photos?page=1&query=${str}&client_id=${'BPz3g4RcwRZH71JTmq-_3rAcWQiOZ_sBmV2zNYnd39g'}&per_page=20`
   );
   const dataJ = await data.json();
   const result = dataJ.results;
@@ -52,8 +64,8 @@ const Submit = () => {
       </div>
 
       <h1 className = "mt-5 text-center text-lg font-semibold  text-transparent bg-clip-text bg-gradient-to-r to-[#553e52] from-[#a57ca0]"> Your Custom Moodboard:</h1>
-      <p className = 'mt-2 text-center italic'> Your custom moodboard based on your {currentpage} will appear below once you submit:</p>
-      <p className = 'mt-2 text-center italic'> Your Text: {img} </p>
+      <p className = 'mt-2 text-center italic'> Your custom moodboard based on your text will appear below once you submit:</p>
+      <p className = 'mt-2 text-center italic'> Text is generated on these : {img} </p>
       <div className="ml-40 mr-40 pictures grid grid-cols-3">
   {res.map((val) => {
     return (

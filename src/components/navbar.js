@@ -63,7 +63,6 @@ export default function Navbar({ className ='', fixed }) {
                 <a
                   onClick = {navigateToCreate}
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  
                 >
                   <i className= "fa fa-bolt text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Create</span>
                 </a>

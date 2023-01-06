@@ -30,8 +30,8 @@ class Timer extends Component {
           <div className = 'timer'>
               <h1 className = 'text-2xl'>{this.state.seconds}</h1>
             <div className = 'buttons'>
-              <Button processing = {this.disabled} className = 'text-white bg-[#5A4257]' id='btn' onClick={this.timer} >Start</Button>
-              <Button  className = 'ml-2 text-white bg-[#5A4257]' onClick={this.onReset}>Reset</Button>
+              <Button processing = {this.disabled} className = 'text-white bg-[#5A4257] hover:bg-[#382635]' id='btn' onClick={this.timer} >Start</Button>
+              <Button  className = 'ml-2 text-white bg-[#5A4257] hover:bg-[#382635]' onClick={this.onReset}>Reset</Button>
         
               </div>
                   {this.state.seconds > 600 &&

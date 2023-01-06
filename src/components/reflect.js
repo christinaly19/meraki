@@ -4,7 +4,7 @@ import Navbar from './navbar'
 import Alert from './alert'
 import Writingbox from './writingbox'
 import Timer from './timer'
-
+import Button from './button'
 function reflect() {
   return (
     <div>
@@ -18,10 +18,14 @@ function reflect() {
      <div className = 'spacebefore1'></div>
       <Writingbox></Writingbox>
       <div className = 'spacebefore'></div>
+  
+      <div className = 'mt-6'>
       <Timer></Timer>
+      </div>
+      </div>
       <div className = 'spacebefore'></div>
       </div>
-    </div>
+
 
   )
 }

@@ -14,3 +14,9 @@ width: 70rem;
 .spacing {
 height: 0.5rem;
 }
+
+.input {
+    height:5rem;
+    font-size:14pt;
+    width: 70rem;
+    }

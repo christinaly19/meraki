@@ -18,7 +18,9 @@ function Create() {
      <div className = 'spacebefore1'></div>
       <Writingbox></Writingbox>
       <div className = 'spacebefore'></div>
+      <div className = 'mt-6'>
       <Timer></Timer>
+      </div>
       <div className = 'spacebefore'></div>
       </div>
     </div>

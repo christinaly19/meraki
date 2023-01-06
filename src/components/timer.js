@@ -27,8 +27,10 @@ class Timer extends Component {
 
   render(){
       return(
-          <div className = 'timer'>
-              <h1 className = 'text-2xl'>{this.state.seconds}</h1>
+          <div className = 'border-2 p-4 timer'>
+            <div></div>
+            <h1> Click To Start Timer (Optional)</h1>
+              <h1 className = 'p-3 text-2xl'>{this.state.seconds}</h1>
             <div className = 'buttons'>
               <Button processing = {this.disabled} className = 'text-white bg-[#5A4257] hover:bg-[#382635]' id='btn' onClick={this.timer} >Start</Button>
               <Button  className = 'ml-2 text-white bg-[#5A4257] hover:bg-[#382635]' onClick={this.onReset}>Reset</Button>

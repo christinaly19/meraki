@@ -14,3 +14,7 @@ align-content: center;
 .spacebefore {
     height: 1rem !important;
     }
+
+.timer {
+width: 20rem;
+}

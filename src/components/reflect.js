@@ -16,6 +16,7 @@ function reflect() {
       <Alert className = 'bg-[#6D8891] hover:bg-[#445054]' markstyle='bg-[#F7E8E6]' link = 'https://gist.githubusercontent.com/christinaly19/031afcd1e22150a6a3db72d9d9e6eb8c/raw/c6c12a6f1f3b79ac62a37a43177b039abf140a77/quotes.json'>
       </Alert>    
      <div className = 'spacebefore1'></div>
+     
       <Writingbox></Writingbox>
       <div className = 'spacebefore'></div>
   

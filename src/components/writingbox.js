@@ -8,7 +8,7 @@ const [res, setRes] = useState([]);
 
 const fetchRequest = async () => {
   const data = await fetch(
-    `https://api.unsplash.com/search/photos?page=1&query=${img}&client_id=${'BPz3g4RcwRZH71JTmq-_3rAcWQiOZ_sBmV2zNYnd39g'}`
+    `https://api.unsplash.com/search/photos?page=1&query=${img}&client_id=${'BPz3g4RcwRZH71JTmq-_3rAcWQiOZ_sBmV2zNYnd39g'}&per_page=20`
   );
   const dataJ = await data.json();
   const result = dataJ.results;
@@ -30,7 +30,10 @@ const Submit = () => {
     <div className = 'writingbox'>
 
         <label for="message" class="font-serif block mb-2 text-xl font-semibold  text-transparent bg-clip-text bg-gradient-to-r to-[#553e52] from-[#a57ca0]">Start Writing:</label>
-        <p className = 'italic font-light'> Ready to start? Click 'start' in the timer below, and your timer for 10 minutes (600 seconds) will begin. </p>
+        <div className = 'description'>
+        <p className = 'text-center italic font-light'> Ready to start? Click 'start' in the timer below, and your timer for 10 minutes (600 seconds) will begin. When you're done, 
+        click submit to see your writing transformed into a <mark className = 'bg-transparent font-semibold'>curated</mark> moodboard with images from Unsplash. </p>
+        </div>
         <div className = 'spacing'></div>
         <div className = 'spacing'></div>
         <div className = 'border-2'>
@@ -38,12 +41,27 @@ const Submit = () => {
           type="text"
           name="query"
           className="input"
-          placeholder={`Start typing here!`}
+          placeholder={`start typing here...`}
           value = {img}
           onChange = {(e) => setImg(e.target.value)}
         />
        </div>
       <Button  onClick = {Submit} className = 'mt-2 button ml-2 text-white bg-[#6D8891] hover:bg-[#445054]'>Submit </Button>
+
+      <div className="col-12 d-flex justify-content-evenly flex-wrap">
+  {res.map((val) => {
+    return (
+      <>
+        <img
+          key={val.id}
+          className="col-3 img-fluid img-thumbnail"
+          src={val.urls.small}
+          alt="val.alt_description"
+        />
+      </>
+    );
+  })}
+</div>
       
     </div>
   )

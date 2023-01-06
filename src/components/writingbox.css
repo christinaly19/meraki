@@ -7,6 +7,13 @@ align-content: center;
 
 }
 
+input[type="text"], textarea {
+
+    background-color : #f9faff; 
+  
+  }
+
+
 #message {
 width: 70rem;
 }
@@ -19,4 +26,8 @@ height: 0.5rem;
     height:5rem;
     font-size:14pt;
     width: 70rem;
-    }
+ }
+
+.description {
+    width: 70rem;
+}

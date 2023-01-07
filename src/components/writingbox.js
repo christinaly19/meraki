@@ -66,7 +66,7 @@ const Submit = () => {
       <h1 className = "mt-5 text-center text-lg font-semibold  text-transparent bg-clip-text bg-gradient-to-r to-[#553e52] from-[#a57ca0]"> Your Custom Moodboard:</h1>
       <p className = 'mt-2 text-center italic'> Your custom moodboard based on your text will appear below once you submit:</p>
       <p className = 'mt-2 text-center italic'> Text is generated on these : {img} </p>
-      <div className="ml-40 mr-40 pictures grid grid-cols-3">
+      <div className="ml-40 mr-40 pictures grid grid-cols-4">
   {res.map((val) => {
     return (
       <>

@@ -5,7 +5,9 @@ import Alert from './alert'
 import Writingbox from './writingbox'
 import Timer from './timer'
 
-function Create() {
+function Create(
+  
+) {
   return (
     <div>
       <Navbar className = 'relative flex flex-wrap items-center justify-between px-2 py-3 bg-[#b4872f] mb-3'/>
@@ -16,7 +18,7 @@ function Create() {
       <Alert className = 'bg-[#B4872F] hover:bg-[#966a18]' markstyle='text-base font-medium  text-[#553E52] bg-[#efdbda]' link ='https://gist.githubusercontent.com/christinaly19/e050118855f40b5e11c6267849f20645/raw/0b907274e77c2730c10d975f0ee9e4ee91cf1e25/writingprompts.json'>
       </Alert>    
      <div className = 'spacebefore1'></div>
-      <Writingbox></Writingbox>
+      <Writingbox className = 'mt-2 button ml-2 text-white bg-[#6D8891] hover:bg-[#445054]'></Writingbox>
       <div className = 'spacebefore'></div>
       <div className = 'mt-6'>
       <Timer></Timer>

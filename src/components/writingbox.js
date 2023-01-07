@@ -2,7 +2,9 @@ import React, {useState, useEffect} from 'react'
 import './writingbox.css'
 import Button from './button'
 
-function Writingbox() {
+function Writingbox(
+  className = '',
+) {
 
 const [img, setImg] = useState("");
 const [res, setRes] = useState([]);
@@ -60,7 +62,7 @@ const Submit = () => {
           onChange = {(e) => setImg(e.target.value)}
         />
        </div>
-      <Button  onClick = {Submit} className = 'mt-2 button ml-2 text-white bg-[#6D8891] hover:bg-[#445054]'>Submit </Button>
+      <Button  onClick = {Submit} className = 'mt-4 button ml-2 text-[#382635] border-1 border-[#5A4257] bg-[#f7e8e6] hover:bg-[#382635] hover:text-white'> Submit </Button>
       </div>
 
       <h1 className = "mt-5 text-center text-lg font-semibold  text-transparent bg-clip-text bg-gradient-to-r to-[#553e52] from-[#a57ca0]"> Your Custom Moodboard:</h1>
